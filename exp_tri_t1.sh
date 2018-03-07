@@ -3,18 +3,17 @@
 # Investigate optimal number of clusters & number of Gaussian
 # for a tied-state triphone model
 
-# Srain triphone system using MFCC and delta & delta-delta features
-
+# Train triphone system using MFCC and delta & delta-delta features
 # Default values
 num_leaves=2500
 num_gauss=15000
 data_dir=data/train_words
 lang_dir=data/lang_wsj
 
-# Use aligned monophone model from task 1
+# Align model from task 1, then use aligned monophone model
 orig_model=exp/mono1000
 algn_dir=${orig_model}_ali
-#steps/align_si.sh --nj 4 ${data_dir} ${lang_dir} ${orig_model} ${algn_dir}
+steps/align_si.sh --nj 4 ${data_dir} ${lang_dir} ${orig_model} ${algn_dir}
 
 for num_leaves in {2000..3000..100}
 do
