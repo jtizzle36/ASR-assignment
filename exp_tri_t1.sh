@@ -17,7 +17,7 @@ steps/align_si.sh --nj 4 ${data_dir} ${lang_dir} ${orig_model} ${algn_dir}
 
 for num_leaves in {2000..3000..100}
 do
-  for num_gauss in {12500..20000..500}
+  for num_gauss in {12500..17500..500}
   do
     exp_name=tri_t1_${num_leaves}_${num_gauss}
     exp_dir=exp/${exp_name}
