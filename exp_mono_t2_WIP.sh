@@ -20,4 +20,4 @@ done
 ./local/score_words.sh ./data/test_words_plp ./exp/plp/graph ./exp/plp/decode_test
 more ./exp/plp/decode_test/scoring_kaldi/best_wer
 
-# this produced a WER of 83.64
+# this produced a WER of 86.65.
