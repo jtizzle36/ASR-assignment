@@ -10,3 +10,5 @@ do
   ./local/score_words.sh ./data/test_words ./exp/mono${totgauss}/graph ./exp/mono${totgauss}/decode_test
   more ./exp/mono${totgauss}/decode_test/scoring_kaldi/best_wer >> ./my-local/exp_mono_results
 done
+
+# We re-ran this script with different values, and decided optimal was totgauss 9000.
