@@ -10,4 +10,4 @@ local/score_words.sh data/test_words exp/rm_delta/graph exp/rm_delta/decode_test
 more exp/rm_delta/decode_test/scoring_kaldi/best_wer
 
 # with all delta/delta-delta features removed i.e., using raw MFCC features,
-# WER=81.53
+# WER=80.64
