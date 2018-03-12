@@ -1,4 +1,5 @@
 #!/bin/bash
+# Task 1.1
 # Decode, score, and display WER of monophone with optimal number of gaussian components
 
 best_totgauss=9000
