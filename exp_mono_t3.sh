@@ -14,8 +14,8 @@ for delta in 0 1; do
   decode_script=./my-local/decode_delta${delta}.sh
   exp_dir=./exp/exp_mono_delta${delta}
   ${train_script} --nj 4 data/train_words data/lang_wsj ${exp_dir}
-  ${decode_script} ${exp_dir}/graph data/test_words ${exp_dir}/decode_test
   ./utils/mkgraph.sh --mono data/lang_wsj_test_bg ${exp_dir} ${exp_dir}/graph
+  ${decode_script} ${exp_dir}/graph data/test_words ${exp_dir}/decode_test
   ./local/score_words.sh data/test_words ${exp_dir}/graph ${exp_dir}/decode_test
   more ${exp_dir}/decode_test/scoring_kaldi/best_wer
 done
