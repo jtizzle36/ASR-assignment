@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Task 1.1
 # Explore optimal number of Gaussian components
 
 for totgauss in {100..2500..100}
@@ -12,3 +13,4 @@ do
 done
 
 # We re-ran this script with different values, and decided optimal was totgauss 9000.
+# WER: 54.89%
