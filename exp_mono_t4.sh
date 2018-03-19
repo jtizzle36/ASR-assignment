@@ -16,7 +16,7 @@ done
 # make graphs
 ~/asworkdir/utils/mkgraph.sh --mono ~/asworkdir/data/lang_wsj_test_bg ~/asworkdir/exp/mono_word${ngauss}_fake_cvnm ~/asworkdir/exp/mono_word${ngauss}_fake_cvnm/graph
 # decode model
-~/asworkdir/steps/decode.sh --nj 4 ~/asworkdir/exp/mono_word${ngauss}_fake_cvnm/graph ~/asworkdir/data/test_words ~/asworkdir/exp/mono_word${ngauss}_fake_cvnm/decode_test
+~/asworkdir/steps/decode.sh --nj 4 ~/asworkdir/exp/mono_word${ngauss}_fake_cvnm/graph ~/asworkdir/data/test_words_cmvn ~/asworkdir/exp/mono_word${ngauss}_fake_cvnm/decode_test
 # score model
 ~/asworkdir/local/score_words.sh ~/asworkdir/data/test_words_cmvn exp/mono_word${ngauss}_fake_cvnm/graph ~/asworkdir/exp/mono_word${ngauss}_fake_cvnm/decode_test
 # output score to file
